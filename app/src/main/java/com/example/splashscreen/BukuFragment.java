@@ -70,13 +70,11 @@ public class BukuFragment<view> extends Fragment {
     }
 
     private void getAllBookData() {
-        Log.e("TAG", "getAllBookData: " + AppService.getToken());
         BookApiService apiService = retrofit.create(BookApiService.class);
         Call<List<Book>> result = apiService.getAllBuku(AppService.getToken());
         result.enqueue(new Callback<List<Book>>() {
             @Override
             public void onResponse(Call<List<Book>> call, Response<List<Book>> response) {
-
                 addData(response.body());
             }
 
@@ -90,14 +88,12 @@ public class BukuFragment<view> extends Fragment {
         List<BookAdapter> bookAdapterList = new ArrayList<>();
         BookAdapter bookAdapter;
         for (Book books : data) {
-            Log.e("TAG", "addData: " + books.getJudul());
             bookAdapter = new BookAdapter();
             bookAdapter.setId(books.getId());
             bookAdapter.setJudul(books.getJudul());
             bookAdapter.setPenulis(books.getPenulis());
-            bookAdapter.setThumb(R.drawable.vespa);
+            bookAdapter.setThumb(books.getThumb());
             bookAdapterList.add(bookAdapter);
-            return;
         }
         memberListAdapter.addAll(bookAdapterList);
     }

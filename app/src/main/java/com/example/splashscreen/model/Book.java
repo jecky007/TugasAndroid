@@ -5,15 +5,17 @@ public class Book {
     private String judul;
     private String penerbit;
     private String penulis;
+    private String thumb;
 
-    public Book(int id, String judul, String penerbit, String penulis) {
+    public Book() {
+    }
+
+    public Book(int id, String judul, String penerbit, String penulis, String thumb) {
         this.id = id;
         this.judul = judul;
         this.penerbit = penerbit;
         this.penulis = penulis;
-    }
-
-    public Book() {
+        this.thumb = thumb;
     }
 
     public int getId() {
@@ -46,5 +48,13 @@ public class Book {
 
     public void setPenulis(String penulis) {
         this.penulis = penulis;
+    }
+
+    public String getThumb() {
+        return thumb;
+    }
+
+    public void setThumb(String thumb) {
+        this.thumb = thumb;
     }
 }

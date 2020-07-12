@@ -1,6 +1,8 @@
 package com.example.splashscreen.adapter;
 
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,13 +41,17 @@ public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.Me
         MemberViewHolder memberViewHolder = new MemberViewHolder(view);
         return memberViewHolder;
     }
-//    private Bitmap getBitmap(String base64) {}
+    private Bitmap getBitmap(String base64String) {
+        byte[] decodedString = Base64.decode(base64String, Base64.DEFAULT);
+        Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+        return decodedByte;
+    }
 
     @Override
     public void onBindViewHolder(MemberViewHolder holder, final int position) {
         final BookAdapter bookAdapter = bookAdapterList.get(position);
-//        Bitmap bitmap = getBitmap(bookAdapter.getThumb());
-        holder.bookThumb.setImageResource(bookAdapter.getThumb());
+        Bitmap bitmap = getBitmap(bookAdapter.getThumb());
+        holder.bookThumb.setImageBitmap(bitmap);
         holder.judul.setText(bookAdapter.getJudul());
         holder.penulis.setText(bookAdapter.getPenulis());
 
@@ -65,6 +71,11 @@ public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.Me
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);
+    }
+
+    @Override
+    public void onDetachedFromRecyclerView(RecyclerView recyclerView) {
+        super.onDetachedFromRecyclerView(recyclerView);
     }
 
     static class MemberViewHolder extends RecyclerView.ViewHolder {
