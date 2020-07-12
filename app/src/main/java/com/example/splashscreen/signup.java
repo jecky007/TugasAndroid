@@ -15,24 +15,19 @@ import android.widget.Toast;
 
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
-import com.example.splashscreen.login.LoginResult;
-import com.example.splashscreen.login.UserApiService;
-import com.example.splashscreen.signupmodel.SignupBody;
-import com.example.splashscreen.signupmodel.SignupResult;
-import com.example.splashscreen.utility.RetrofitUtility;
-import com.example.splashscreen.utility.Utility;
-import com.google.common.collect.Range;
+import com.example.splashscreen.apihelper.UserApiService;
+import com.example.splashscreen.model.SignupBody;
+import com.example.splashscreen.model.SignupResult;
+import com.example.splashscreen.apihelper.RetrofitUtility;
+import com.example.splashscreen.apihelper.Utility;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 public class signup extends AppCompatActivity {
     private Retrofit retrofit;

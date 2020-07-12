@@ -1,6 +1,4 @@
-package com.example.splashscreen.signupmodel;
-
-import com.example.splashscreen.login.Record;
+package com.example.splashscreen.model;
 
 public class SignupResult {
     private boolean success;

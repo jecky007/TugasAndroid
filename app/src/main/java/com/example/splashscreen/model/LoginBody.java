@@ -1,4 +1,4 @@
-package com.example.splashscreen.login;
+package com.example.splashscreen.model;
 
 public class LoginBody {
     private String username;

@@ -1,6 +1,4 @@
-package com.example.splashscreen.login;
-
-import android.icu.text.AlphabeticIndex;
+package com.example.splashscreen.model;
 
 public class LoginResult {
     private boolean success;

@@ -1,4 +1,6 @@
-package com.example.splashscreen.utility;
+package com.example.splashscreen.apihelper;
+
+import com.example.splashscreen.apihelper.Const;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

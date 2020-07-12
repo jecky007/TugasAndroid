@@ -1,4 +1,4 @@
-package com.example.splashscreen.signupmodel;
+package com.example.splashscreen.model;
 
 import java.util.ArrayList;
 import java.util.List;
