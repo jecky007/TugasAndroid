@@ -52,7 +52,6 @@ public class LoginActivity extends AppCompatActivity {
                 } else if (tPassword.getText().toString().length() == 0) {
                     tPassword.setError("tidak boleh kosong");
                 } else {
-                    Toast.makeText(getApplicationContext(), "Login berhasil", Toast.LENGTH_SHORT).show();
                     loginSubmit(tUsername.getText().toString(), tPassword.getText().toString());
                 }
             }
@@ -80,7 +79,6 @@ public class LoginActivity extends AppCompatActivity {
         result.enqueue(new Callback<LoginResult>() {
             @Override
             public void onResponse(Call<LoginResult> call, Response<LoginResult> response) {
-                Toast.makeText(LoginActivity.this, "Logiin gagal", Toast.LENGTH_SHORT).show();
                 try {
                     if (response.body().isSuccess()) {
                         Toast.makeText(LoginActivity.this, "Logiin berhasil", Toast.LENGTH_SHORT).show();
