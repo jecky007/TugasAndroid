@@ -2,6 +2,8 @@ package com.example.splashscreen.model;
 
 public class Book {
     private int id;
+    private int harga;
+    private int tahun;
     private String judul;
     private String penerbit;
     private String penulis;
@@ -10,20 +12,28 @@ public class Book {
     public Book() {
     }
 
-    public Book(int id, String judul, String penerbit, String penulis, String thumb) {
-        this.id = id;
-        this.judul = judul;
-        this.penerbit = penerbit;
-        this.penulis = penulis;
-        this.thumb = thumb;
-    }
-
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getHarga() {
+        return harga;
+    }
+
+    public void setHarga(int harga) {
+        this.harga = harga;
+    }
+
+    public int getTahun() {
+        return tahun;
+    }
+
+    public void setTahun(int tahun) {
+        this.tahun = tahun;
     }
 
     public String getJudul() {

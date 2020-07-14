@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashActivity"
-    android:background="@drawable/gradient"
+    android:background="@drawable/color"
     android:id="@+id/splash_screen">
 
     <ImageView
@@ -16,6 +16,6 @@
         android:layout_centerVertical="true"
         android:backgroundTint="#FFFFFF"
         android:scaleType="centerCrop"
-        android:src="@drawable/vespa"/>
+        android:src="@drawable/scooter"/>
 
 </RelativeLayout>

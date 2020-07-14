@@ -13,58 +13,64 @@
 
 
        <EditText
+           android:id="@+id/judul"
            android:layout_width="324dp"
            android:layout_height="38dp"
            android:background="@drawable/border"
            android:layout_marginTop="112dp"
            android:paddingLeft="7dp"
            android:hint="Judul"
-           android:layout_marginLeft="10dp">
+           android:layout_marginLeft="30dp">
        </EditText>
 
    </FrameLayout>
 
     <EditText
+        android:id="@+id/penulis"
         android:layout_width="324dp"
         android:layout_height="38dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="160dp"
         android:background="@drawable/border"
         android:hint="Penulis"
         android:paddingLeft="7dp">
     </EditText>
     <EditText
+        android:id="@+id/penerbit"
         android:layout_width="324dp"
         android:layout_height="38dp"
         android:background="@drawable/border"
         android:layout_marginTop="208dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="30dp"
         android:paddingLeft="7dp"
         android:hint="Penerbit">
     </EditText>
     <EditText
+        android:id="@+id/tahun"
         android:layout_width="324dp"
         android:layout_height="38dp"
         android:background="@drawable/border"
         android:layout_marginTop="257dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="30dp"
         android:paddingLeft="7dp"
         android:hint="Tahun" >
     </EditText>
     <EditText
+        android:id="@+id/harga"
         android:layout_width="324dp"
         android:layout_height="38dp"
         android:background="@drawable/border"
         android:layout_marginTop="310dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="30dp"
         android:paddingLeft="7dp"
         android:hint="Harga"/>
 
 
     <ImageView
+        android:id="@+id/addimage"
         android:layout_width="250dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="60dp"
+        android:layout_marginLeft="70dp"
         android:background="@drawable/buku"/>
 
     <Button
@@ -74,7 +80,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="370dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="30dp"
         android:background="@drawable/border"/>
 
     <Button
@@ -85,7 +91,15 @@
         android:layout_height="50dp"
         android:background="@drawable/border"
         android:layout_marginTop="370dp"
-        android:layout_marginLeft="230dp"/>
+        android:layout_marginLeft="253dp"/>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/ic_baseline_add_photo_alternate_24"/>
 
 
 
