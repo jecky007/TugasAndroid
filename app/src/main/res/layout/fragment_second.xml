@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/color"
+    tools:context=".SecondFragment">
+
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="520dp"
+       android:background="@color/cardview_shadow_start_color">
+
+
+       <EditText
+           android:layout_width="324dp"
+           android:layout_height="38dp"
+           android:background="@drawable/border"
+           android:layout_marginTop="112dp"
+           android:paddingLeft="7dp"
+           android:hint="Judul"
+           android:layout_marginLeft="10dp">
+       </EditText>
+
+   </FrameLayout>
+
+    <EditText
+        android:layout_width="324dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/border"
+        android:hint="Penulis"
+        android:paddingLeft="7dp">
+    </EditText>
+    <EditText
+        android:layout_width="324dp"
+        android:layout_height="38dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="208dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="7dp"
+        android:hint="Penerbit">
+    </EditText>
+    <EditText
+        android:layout_width="324dp"
+        android:layout_height="38dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="257dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="7dp"
+        android:hint="Tahun" >
+    </EditText>
+    <EditText
+        android:layout_width="324dp"
+        android:layout_height="38dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="310dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="7dp"
+        android:hint="Harga"/>
+
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/buku"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:text="Open Image"
+        android:textStyle="bold"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/border"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:text="ADD BOOK"
+        android:textStyle="bold"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="370dp"
+        android:layout_marginLeft="230dp"/>
+
+
+
+</RelativeLayout>
