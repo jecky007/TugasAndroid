@@ -3,6 +3,7 @@ package com.example.splashscreen;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -15,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.basgeekball.awesomevalidation.AwesomeValidation;
@@ -25,7 +27,10 @@ import com.example.splashscreen.model.Book;
 import com.example.splashscreen.model.LoginResult;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 
 import retrofit2.Call;
@@ -38,6 +43,7 @@ public class SecondFragment extends Fragment {
     Retrofit retrofit;
     EditText judul, penulis, penerbit, tahun, harga;
     Button button3, button4;
+    ImageView ImageView;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -96,6 +102,7 @@ public class SecondFragment extends Fragment {
         harga = view.findViewById(R.id.harga);
         button3 = view.findViewById(R.id.button3);
         button4 = view.findViewById(R.id.button4);
+        ImageView = view.findViewById(R.id.image);
 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,6 +137,7 @@ public class SecondFragment extends Fragment {
         Uri uri = data.getData();
         InputStream imageStream;
         String encodeImage = "";
+        ImageView.setImageURI(uri);
 
         try {
             imageStream = getContext().getContentResolver().openInputStream(uri);
@@ -141,7 +149,6 @@ public class SecondFragment extends Fragment {
         base64Image = encodeImage;
 
     }
-
 
 
     private void sendData(String judul, String penulis, String penerbit, String tahun, String harga) {
