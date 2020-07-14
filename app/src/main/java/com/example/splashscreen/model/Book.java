@@ -8,8 +8,22 @@ public class Book {
     private String penerbit;
     private String penulis;
     private String thumb;
+    private String message;
+    private boolean success;
 
     public Book() {
+    }
+
+    public Book(int id, int harga, int tahun, String judul, String penerbit, String penulis, String thumb, String message, boolean success) {
+        this.id = id;
+        this.harga = harga;
+        this.tahun = tahun;
+        this.judul = judul;
+        this.penerbit = penerbit;
+        this.penulis = penulis;
+        this.thumb = thumb;
+        this.message = message;
+        this.success = success;
     }
 
     public int getId() {
@@ -66,5 +80,21 @@ public class Book {
 
     public void setThumb(String thumb) {
         this.thumb = thumb;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public void setSuccess(boolean success) {
+        this.success = success;
     }
 }

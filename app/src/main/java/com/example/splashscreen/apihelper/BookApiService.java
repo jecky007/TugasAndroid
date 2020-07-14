@@ -13,15 +13,15 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface BookApiService {
-    @Headers({
-            "Accept-Encoding: gzip, deflate", //terima body response server dalam bentuk gzip
-            "Content-Encoding: gzip", // content encoding body dalam bentuk gzip
-    })
+//    @Headers({
+//            "Accept-Encoding: gzip, deflate", //terima body response server dalam bentuk gzip
+//            "Content-Encoding: gzip", // content encoding body dalam bentuk gzip
+//    })
 
     @GET("api/buku")
     Call<List<Book>>getAllBuku(@Header("Authorization") String token);
 
     @POST("api/buku")
-    Call<LoginResult> insertNewBook(@Header("Authorization") String token, @Body Book body);
+    Call<Book> insertNewBook(@Header("Authorization") String token, @Body Book body);
 
 }
