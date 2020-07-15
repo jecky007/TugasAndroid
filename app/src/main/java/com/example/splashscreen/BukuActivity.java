@@ -17,6 +17,7 @@ public class BukuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homefragment);
+        openHomeFragment();
 
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);

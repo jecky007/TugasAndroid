@@ -23,7 +23,7 @@
            android:layout_marginLeft="25dp">
        </EditText>
 
-   </FrameLayout>
+
 
     <EditText
         android:id="@+id/penulis"
@@ -94,12 +94,13 @@
         android:layout_marginLeft="247dp"/>
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/imageView"
         android:layout_width="75dp"
         android:layout_height="80dp"
         android:layout_marginTop="425dp"
         android:layout_marginLeft="30dp"
         android:background="@drawable/ic_baseline_add_photo_alternate_24"/>
+   </FrameLayout>
 
 
 

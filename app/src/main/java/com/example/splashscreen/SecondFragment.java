@@ -45,13 +45,14 @@ public class SecondFragment extends Fragment {
     EditText judul, penulis, penerbit, tahun, harga;
     Button button3, button4;
     ImageView ImageView;
+    private String TAG = "SecondFragment";
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private static final int PICK_IMAGE = 1;//kode response untuk operasi pilih image
-    private String base64Image = ""; // atribut global untuk menampung hasil base64
+    private String base64Image; // atribut global untuk menampung hasil base64
     private View view;
 
 
@@ -104,7 +105,7 @@ public class SecondFragment extends Fragment {
         harga = view.findViewById(R.id.harga);
         button3 = view.findViewById(R.id.button3);
         button4 = view.findViewById(R.id.button4);
-        ImageView = view.findViewById(R.id.image);
+        ImageView = view.findViewById(R.id.imageView);
 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -188,8 +189,10 @@ public class SecondFragment extends Fragment {
             public void onResponse(Call<Book> call, Response<Book> response) {
                 if (response.body().isSuccess()) {
                     Log.e("TAG", "berhasil menambah buku");
+                    Toast.makeText(getActivity(), "Data berhasil masuk", Toast.LENGTH_SHORT).show();
                 } else {
                     Log.e("TAG", "gagal menambah buku");
+                    Toast.makeText(getActivity(), "Data tidak masuk", Toast.LENGTH_SHORT).show();
                 }
             }
 
