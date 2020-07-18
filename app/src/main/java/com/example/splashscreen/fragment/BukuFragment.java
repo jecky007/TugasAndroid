@@ -1,27 +1,25 @@
-package com.example.splashscreen;
+package com.example.splashscreen.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
+import com.example.splashscreen.BukuActivity;
 import com.example.splashscreen.R;
-import com.example.splashscreen.apihelper.AppService;
 import com.example.splashscreen.model.Book;
+import com.example.splashscreen.service.AppService;
 import com.example.splashscreen.adapter.BookAdapter;
 import com.example.splashscreen.adapter.MemberListAdapter;
-import com.example.splashscreen.apihelper.BookApiService;
-import com.example.splashscreen.apihelper.RetrofitUtility;
+import com.example.splashscreen.apiinterface.BookApiService;
+import com.example.splashscreen.utility.RetrofitUtility;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,7 +58,7 @@ public class BukuFragment<view> extends Fragment {
     private void initRecyclerView() {
         listMember = view.findViewById(R.id.listMember);
         linearLayoutManager = new LinearLayoutManager(context);
-        memberListAdapter = new MemberListAdapter();
+        memberListAdapter = new MemberListAdapter(context,this);
         listMember.setLayoutManager(linearLayoutManager);
         listMember.setAdapter(memberListAdapter);
     }
@@ -98,6 +96,8 @@ public class BukuFragment<view> extends Fragment {
         }
         memberListAdapter.addAll(bookAdapterList);
     }
-
+    public void openFragmentDialog(int id) {
+        ((BukuActivity)getActivity()).openDialogFragment();
+    }
 
 }

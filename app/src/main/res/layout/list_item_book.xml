@@ -7,6 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
     android:elevation="20dp"
+    android:id="@+id/buku"
     card_view:cardUseCompatPadding="true">
     <RelativeLayout
         android:layout_width="match_parent"

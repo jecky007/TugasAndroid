@@ -1,9 +1,8 @@
-package com.example.splashscreen;
+package com.example.splashscreen.fragment;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -19,19 +18,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.basgeekball.awesomevalidation.AwesomeValidation;
-import com.basgeekball.awesomevalidation.ValidationStyle;
-import com.example.splashscreen.apihelper.AppService;
-import com.example.splashscreen.apihelper.BookApiService;
-import com.example.splashscreen.apihelper.RetrofitUtility;
+import com.example.splashscreen.R;
+import com.example.splashscreen.model.ApiResponse;
 import com.example.splashscreen.model.Book;
-import com.example.splashscreen.model.LoginResult;
+import com.example.splashscreen.service.AppService;
+import com.example.splashscreen.apiinterface.BookApiService;
+import com.example.splashscreen.utility.RetrofitUtility;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.InputStream;
 
 import retrofit2.Call;
@@ -179,14 +174,14 @@ public class SecondFragment extends Fragment {
         book.setJudul(judul);
         book.setPenulis(penulis);
         book.setPenerbit(penerbit);
-        book.setTahun(Integer.valueOf(tahun));
+        book.setTahun(tahun);
         book.setThumb(base64Image);
 
         BookApiService apiService = retrofit.create(BookApiService.class);
-        Call<Book> result = apiService.insertNewBook(AppService.getToken(), book);
-        result.enqueue(new Callback<Book>() {
+        Call<ApiResponse> result = apiService.insertNewBook(AppService.getToken(), book);
+        result.enqueue(new Callback<ApiResponse>() {
             @Override
-            public void onResponse(Call<Book> call, Response<Book> response) {
+            public void onResponse(Call<ApiResponse> call, Response<ApiResponse> response) {
                 if (response.body().isSuccess()) {
                     Log.e("TAG", "berhasil menambah buku");
                     Toast.makeText(getActivity(), "Data berhasil masuk", Toast.LENGTH_SHORT).show();
@@ -197,7 +192,7 @@ public class SecondFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<Book> call, Throwable t) {
+            public void onFailure(Call<ApiResponse> call, Throwable t) {
                 t.printStackTrace();
 
             }

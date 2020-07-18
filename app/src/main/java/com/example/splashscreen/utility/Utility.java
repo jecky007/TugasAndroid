@@ -1,4 +1,4 @@
-package com.example.splashscreen.apihelper;
+package com.example.splashscreen.utility;
 
 import android.Manifest;
 import android.app.Activity;

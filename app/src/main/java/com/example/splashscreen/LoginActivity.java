@@ -11,12 +11,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.splashscreen.apihelper.AppService;
+import com.example.splashscreen.service.AppService;
 import com.example.splashscreen.model.LoginBody;
 import com.example.splashscreen.model.LoginResult;
-import com.example.splashscreen.apihelper.UserApiService;
-import com.example.splashscreen.apihelper.RetrofitUtility;
-import com.example.splashscreen.apihelper.Utility;
+import com.example.splashscreen.apiinterface.UserApiService;
+import com.example.splashscreen.utility.RetrofitUtility;
+import com.example.splashscreen.utility.Utility;
 
 import retrofit2.Call;
 import retrofit2.Callback;

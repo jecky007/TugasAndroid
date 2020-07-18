@@ -15,11 +15,11 @@ import android.widget.Toast;
 
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
-import com.example.splashscreen.apihelper.UserApiService;
+import com.example.splashscreen.apiinterface.UserApiService;
 import com.example.splashscreen.model.SignupBody;
 import com.example.splashscreen.model.SignupResult;
-import com.example.splashscreen.apihelper.RetrofitUtility;
-import com.example.splashscreen.apihelper.Utility;
+import com.example.splashscreen.utility.RetrofitUtility;
+import com.example.splashscreen.utility.Utility;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -97,7 +97,7 @@ public class signup extends AppCompatActivity {
                 try {
                     if (response.body().isSuccess()) {
                         Log.e("TAG", "Signup Success " + response.body().toString());
-                        Intent LoginIntent = new Intent(signup.this,LoginActivity.class);
+                        Intent LoginIntent = new Intent(signup.this, LoginActivity.class);
                         startActivity(LoginIntent);
                         finish();
                     } else {

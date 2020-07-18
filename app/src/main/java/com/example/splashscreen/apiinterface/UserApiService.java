@@ -1,4 +1,4 @@
-package com.example.splashscreen.apihelper;
+package com.example.splashscreen.apiinterface;
 
 import com.example.splashscreen.model.LoginBody;
 import com.example.splashscreen.model.LoginResult;

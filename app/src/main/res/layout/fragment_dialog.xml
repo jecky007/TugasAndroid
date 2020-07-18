@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/color"
+    tools:context=".fragment.DialogFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/imageThumb"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="120dp"
+        android:background="@drawable/buku"/>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="75dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/ic_baseline_add_photo_alternate_24"/>
+
+    <EditText
+        android:id="@+id/inputJudul"
+        android:layout_width="324dp"
+        android:layout_height="38dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="150dp"
+        android:paddingLeft="7dp"
+        android:hint="Judul"
+        android:layout_marginLeft="25dp">
+    </EditText>
+
+
+
+    <EditText
+        android:id="@+id/inputPenulis"
+        android:layout_width="324dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/border"
+        android:hint="Penulis"
+        android:paddingLeft="7dp">
+    </EditText>
+    <EditText
+        android:id="@+id/inputPenerbit"
+        android:layout_width="324dp"
+        android:layout_height="38dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="25dp"
+        android:paddingLeft="7dp"
+        android:hint="Penerbit">
+    </EditText>
+    <EditText
+        android:id="@+id/inputTahun"
+        android:layout_width="324dp"
+        android:layout_height="38dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="25dp"
+        android:paddingLeft="7dp"
+        android:hint="Tahun" >
+    </EditText>
+    <EditText
+        android:id="@+id/inputHarga"
+        android:layout_width="324dp"
+        android:layout_height="38dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="25dp"
+        android:paddingLeft="7dp"
+        android:hint="Harga"/>
+
+    <Button
+        android:id="@+id/button5"
+        android:text="Delete BOOK"
+        android:textStyle="bold"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="247dp"/>
+
+    <Button
+        android:id="@+id/button6"
+        android:text="Update Book"
+        android:textStyle="bold"
+        android:layout_width="105dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/border"/>
+
+</RelativeLayout>

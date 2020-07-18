@@ -1,29 +1,43 @@
 package com.example.splashscreen.model;
 
 public class Book {
+
     private int id;
-    private int harga;
-    private int tahun;
     private String judul;
     private String penerbit;
     private String penulis;
+    private int harga;
+    private int userid;
+    private String tahun;
     private String thumb;
-    private String message;
-    private boolean success;
+
 
     public Book() {
     }
 
-    public Book(int id, int harga, int tahun, String judul, String penerbit, String penulis, String thumb, String message, boolean success) {
-        this.id = id;
-        this.harga = harga;
-        this.tahun = tahun;
+    public Book(String judul, String penulis, String penerbit) {
         this.judul = judul;
         this.penerbit = penerbit;
         this.penulis = penulis;
+    }
+
+    public Book(String judul, String penerbit, String penulis, int harga, int userid, String thumb, String tahun) {
+        this.judul = judul;
+        this.penerbit = penerbit;
+        this.penulis = penulis;
+        this.harga = harga;
+        this.userid = userid;
         this.thumb = thumb;
-        this.message = message;
-        this.success = success;
+        this.tahun = tahun;
+    }
+
+    public Book(int id, String judul, String penerbit, String penulis, int harga, int userid) {
+        this.id = id;
+        this.judul = judul;
+        this.penerbit = penerbit;
+        this.penulis = penulis;
+        this.harga = harga;
+        this.userid = userid;
     }
 
     public int getId() {
@@ -32,22 +46,6 @@ public class Book {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getHarga() {
-        return harga;
-    }
-
-    public void setHarga(int harga) {
-        this.harga = harga;
-    }
-
-    public int getTahun() {
-        return tahun;
-    }
-
-    public void setTahun(int tahun) {
-        this.tahun = tahun;
     }
 
     public String getJudul() {
@@ -74,6 +72,22 @@ public class Book {
         this.penulis = penulis;
     }
 
+    public int getHarga() {
+        return harga;
+    }
+
+    public void setHarga(int harga) {
+        this.harga = harga;
+    }
+
+    public int getUserid() {
+        return userid;
+    }
+
+    public void setUserid(int userid) {
+        this.userid = userid;
+    }
+
     public String getThumb() {
         return thumb;
     }
@@ -82,19 +96,26 @@ public class Book {
         this.thumb = thumb;
     }
 
-    public String getMessage() {
-        return message;
+
+    public String getTahun() {
+        return tahun;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setTahun(String tahun) {
+        this.tahun = tahun;
     }
 
-    public boolean isSuccess() {
-        return success;
-    }
-
-    public void setSuccess(boolean success) {
-        this.success = success;
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", judul='" + judul + '\'' +
+                ", penerbit='" + penerbit + '\'' +
+                ", penulis='" + penulis + '\'' +
+                ", harga=" + harga +
+                ", userid=" + userid +
+                ", tahun=" + tahun +
+                ", thumb='" + thumb + '\'' +
+                '}';
     }
 }
